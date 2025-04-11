@@ -29,7 +29,7 @@ const Login = () => {
   return (
     <>
 
-      <div className='w-screen h-screen bg-black  flex flex-col justify-center items-center'>
+      <div className='w-screen h-screen bg-[#1C1C1C] flex flex-col justify-center items-center'>
         <h1 className='text-white absolute left-6 top-10 text-2xl font-bold'>Login</h1>
 
         <div className='w-4/5 max-w-md mb-10'>

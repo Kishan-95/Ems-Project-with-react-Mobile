@@ -3,11 +3,11 @@ import Header from '../other/Header'
 import CreateTask from '../other/CreateTask'
 import AllTask from '../other/AllTask'
 
-const AdminDashboard = () => {
+const AdminDashboard = ({handleLogout}) => {
     return (
         <div className='bg-[#1C1C1C] h-screen w-full text-white'>
 
-            <Header />
+            <Header handleLogout={handleLogout}/>
             <CreateTask/>
             <AllTask/>
 

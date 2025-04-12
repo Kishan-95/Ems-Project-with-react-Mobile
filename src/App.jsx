@@ -8,8 +8,10 @@ import { AuthContext } from './context/AuthProvider.jsx'
 
 const App = () => {
 
+  
 
   const [user, setuser] = useState('')
+  const [loggedInUserData, setloggedInUserData] = useState('')
 
   const authData = useContext(AuthContext)
 
@@ -21,6 +23,7 @@ const App = () => {
       if (storedUser) {
         const parsed = JSON.parse(storedUser); // THIS is the key fix
         setuser(parsed.role);
+        setloggedInUserData(parsed)
       }
       
     }}
@@ -29,18 +32,25 @@ const App = () => {
   
 
   const handleLogin = (email,password) =>{
-    if(authData && authData.admin.find(e => e.email === email && e.password === password)){
+    if(authData){
+    const admin = authData && authData.admin.find(e => e.email === email && e.password === password)
+
+    if(admin){
       setuser('admin')
-      localStorage.setItem("loggedInUser",JSON.stringify({role:'admin'}))
-      
+      setloggedInUserData(admin)
+      localStorage.setItem("loggedInUser",JSON.stringify({role:'admin',...admin}))
+      return;
       
     }
-    else if (authData && authData.employees.find(e=>e.email === email && e.password === password)){
+
+    const employee = authData && authData.employees.find(e=>e.email === email && e.password === password)
+    if (employee){
       setuser('employee')
-      localStorage.setItem("loggedInUser",JSON.stringify({role:'employee'}))
-      
+      setloggedInUserData(employee)
+      localStorage.setItem("loggedInUser",JSON.stringify({role:'employee',...employee}))
+      return;
     }
-    else{
+    
       alert('Invalid Credentials')
 
     }
@@ -52,14 +62,15 @@ const App = () => {
   setuser('')
  }
   
+ 
   
 
   return (
     <div>
       <>
       {!user ? <Login handleLogin={handleLogin}/> : ''}
-      {user === 'employee' && <EmployeeDashboard handleLogout={handleLogout}/> }
-      {user === 'admin' && <AdminDashboard handleLogout={handleLogout}/>}
+      {user === 'employee' && <EmployeeDashboard handleLogout={handleLogout} data={loggedInUserData}/> }
+      {user === 'admin' && <AdminDashboard handleLogout={handleLogout} data={loggedInUserData}/>}
 
       
       </>

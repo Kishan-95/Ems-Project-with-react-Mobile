@@ -1,3 +1,5 @@
+// utils/localStorage.js
+
 const employees = [
   {
     Id: 1,
@@ -9,7 +11,7 @@ const employees = [
       activeTasks: 0,
       completedTasks: 1,
       failedTasks: 1,
-      newTasks: 1
+      newTasks: 1,
     },
     tasks: [
       {
@@ -20,7 +22,7 @@ const employees = [
         taskTitle: "Update project documentation",
         taskDescription: "Add the missing API docs to the project README.",
         taskDate: "2025-04-12",
-        category: "Documentation"
+        category: "Documentation",
       },
       {
         active: false,
@@ -30,7 +32,7 @@ const employees = [
         taskTitle: "Fix login bug",
         taskDescription: "Resolve the issue causing login to fail on Safari.",
         taskDate: "2025-04-10",
-        category: "Bug Fix"
+        category: "Bug Fix",
       },
       {
         active: false,
@@ -40,9 +42,9 @@ const employees = [
         taskTitle: "Design homepage layout",
         taskDescription: "Create a new design layout for the homepage section.",
         taskDate: "2025-04-09",
-        category: "Design"
-      }
-    ]
+        category: "Design",
+      },
+    ],
   },
   {
     Id: 2,
@@ -54,7 +56,7 @@ const employees = [
       activeTasks: 0,
       completedTasks: 1,
       failedTasks: 1,
-      newTasks: 2
+      newTasks: 2,
     },
     tasks: [
       {
@@ -65,7 +67,7 @@ const employees = [
         taskTitle: "Build navbar component",
         taskDescription: "Implement a responsive navbar using React.",
         taskDate: "2025-04-12",
-        category: "Frontend"
+        category: "Frontend",
       },
       {
         active: false,
@@ -75,7 +77,7 @@ const employees = [
         taskTitle: "Create API endpoint",
         taskDescription: "Develop the endpoint for fetching user data.",
         taskDate: "2025-04-11",
-        category: "Backend"
+        category: "Backend",
       },
       {
         active: false,
@@ -85,7 +87,7 @@ const employees = [
         taskTitle: "Optimize images",
         taskDescription: "Compress and optimize all product images.",
         taskDate: "2025-04-10",
-        category: "Performance"
+        category: "Performance",
       },
       {
         active: false,
@@ -95,9 +97,9 @@ const employees = [
         taskTitle: "Refactor cart logic",
         taskDescription: "Clean up and simplify the cart reducer logic.",
         taskDate: "2025-04-12",
-        category: "Refactor"
-      }
-    ]
+        category: "Refactor",
+      },
+    ],
   },
   {
     Id: 3,
@@ -109,7 +111,7 @@ const employees = [
       activeTasks: 1,
       completedTasks: 1,
       failedTasks: 0,
-      newTasks: 1
+      newTasks: 1,
     },
     tasks: [
       {
@@ -120,7 +122,7 @@ const employees = [
         taskTitle: "Test payment gateway",
         taskDescription: "Run integration tests for Stripe payments.",
         taskDate: "2025-04-12",
-        category: "Testing"
+        category: "Testing",
       },
       {
         active: false,
@@ -130,7 +132,7 @@ const employees = [
         taskTitle: "Fix 404 error",
         taskDescription: "Debug and fix the 404 error on blog pages.",
         taskDate: "2025-04-11",
-        category: "Bug Fix"
+        category: "Bug Fix",
       },
       {
         active: true,
@@ -140,9 +142,9 @@ const employees = [
         taskTitle: "Add animation to hero section",
         taskDescription: "Use GSAP to animate homepage hero elements.",
         taskDate: "2025-04-12",
-        category: "Frontend"
-      }
-    ]
+        category: "Frontend",
+      },
+    ],
   },
   {
     Id: 4,
@@ -154,7 +156,7 @@ const employees = [
       activeTasks: 0,
       completedTasks: 1,
       failedTasks: 1,
-      newTasks: 1
+      newTasks: 1,
     },
     tasks: [
       {
@@ -165,7 +167,7 @@ const employees = [
         taskTitle: "Set up CI pipeline",
         taskDescription: "Configure GitHub Actions for automated testing.",
         taskDate: "2025-04-10",
-        category: "DevOps"
+        category: "DevOps",
       },
       {
         active: false,
@@ -175,7 +177,7 @@ const employees = [
         taskTitle: "Integrate Firebase",
         taskDescription: "Add Firebase authentication to the app.",
         taskDate: "2025-04-09",
-        category: "Backend"
+        category: "Backend",
       },
       {
         active: false,
@@ -185,9 +187,9 @@ const employees = [
         taskTitle: "Draft team onboarding guide",
         taskDescription: "Write a guide for new team members.",
         taskDate: "2025-04-12",
-        category: "HR"
-      }
-    ]
+        category: "HR",
+      },
+    ],
   },
   {
     Id: 5,
@@ -199,7 +201,7 @@ const employees = [
       activeTasks: 1,
       completedTasks: 1,
       failedTasks: 1,
-      newTasks: 1
+      newTasks: 1,
     },
     tasks: [
       {
@@ -210,7 +212,7 @@ const employees = [
         taskTitle: "Style dashboard components",
         taskDescription: "Improve the UI styling on the admin dashboard.",
         taskDate: "2025-04-12",
-        category: "Design"
+        category: "Design",
       },
       {
         active: false,
@@ -220,7 +222,7 @@ const employees = [
         taskTitle: "Build user profile page",
         taskDescription: "Create a page for users to view and edit their profile.",
         taskDate: "2025-04-11",
-        category: "Frontend"
+        category: "Frontend",
       },
       {
         active: false,
@@ -230,7 +232,7 @@ const employees = [
         taskTitle: "Set up database schema",
         taskDescription: "Define and create tables for the new project DB.",
         taskDate: "2025-04-08",
-        category: "Database"
+        category: "Database",
       },
       {
         active: true,
@@ -240,34 +242,38 @@ const employees = [
         taskTitle: "Audit code for security issues",
         taskDescription: "Check for vulnerabilities and bad practices.",
         taskDate: "2025-04-12",
-        category: "Security"
-      }
-    ]
-  }
+        category: "Security",
+      },
+    ],
+  },
 ];
 
 const admin = [
   {
     Id: 1,
     email: "admin@example.com",
-    password: "123"
-  }
+    password: "123",
+  },
 ];
 
 export const setLocalStorage = () => {
-  // Ensure no newTask is also marked active
-  employees.forEach(employee => {
-    employee.tasks.forEach(task => {
-      if (task.newTask) task.active = false;
-    });
-  });
+  const existingEmployees = localStorage.getItem("employees");
+  const existingAdmin = localStorage.getItem("admin");
 
-  localStorage.setItem("employees", JSON.stringify(employees));
-  localStorage.setItem("admin", JSON.stringify(admin));
+  if (!existingEmployees || !existingAdmin) {
+    // Reset active status if task is new
+    employees.forEach((employee) => {
+      employee.tasks.forEach((task) => {
+        if (task.newTask) task.active = false;
+      });
+    });
+    localStorage.setItem("employees", JSON.stringify(employees));
+    localStorage.setItem("admin", JSON.stringify(admin));
+  }
 };
 
 export const getLocalStorage = () => {
-  const employees = JSON.parse(localStorage.getItem("employees"));
-  const admin = JSON.parse(localStorage.getItem("admin"));
+  const employees = JSON.parse(localStorage.getItem("employees")) || [];
+  const admin = JSON.parse(localStorage.getItem("admin")) || [];
   return { employees, admin };
 };

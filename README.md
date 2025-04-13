@@ -57,24 +57,24 @@ Use the following email/password combinations to test the app:
 
 ### Admin Login
 - **Email:** `admin@example.com`  
-- **Password:** `admin123`
+- **Password:** `123`
 
 ### Employee Logins
 
 - **Email:** `employee1@example.com`  
-  **Password:** `employee123`
+  **Password:** `123`
   
 - **Email:** `employee2@example.com`  
-  **Password:** `employee123`
+  **Password:** `123`
 
 - **Email:** `employee3@example.com`  
-  **Password:** `employee123`
+  **Password:** `123`
 
 - **Email:** `employee4@example.com`  
-  **Password:** `employee123`
+  **Password:** `123`
 
 - **Email:** `employee5@example.com`  
-  **Password:** `employee123`
+  **Password:** `123`
 
 ---
 

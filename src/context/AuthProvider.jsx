@@ -19,11 +19,21 @@ const AuthProvider = ({children}) => {
     
     
     }, [])
+
+    const updateEmployees = (updatedEmployees) => {
+      setuserData((prev) => {
+        const newData = { ...prev, employees: updatedEmployees };
+        localStorage.setItem('employees', JSON.stringify(updatedEmployees));
+        return newData;
+      });
+    };
+  
+  
     
 
 
   return (
-    <AuthContext.Provider value={userData}>
+    <AuthContext.Provider value={{...userData,updateEmployees}}>
         {children}
     </AuthContext.Provider>
 

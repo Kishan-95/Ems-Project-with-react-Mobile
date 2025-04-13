@@ -51,6 +51,33 @@ GitHub Codespaces (developed entirely on mobile)
 
 ---
 
+## Dummy Credentials
+
+Use the following email/password combinations to test the app:
+
+### Admin Login
+- **Email:** `admin@example.com`  
+- **Password:** `admin123`
+
+### Employee Logins
+
+- **Email:** `employee1@example.com`  
+  **Password:** `employee123`
+  
+- **Email:** `employee2@example.com`  
+  **Password:** `employee123`
+
+- **Email:** `employee3@example.com`  
+  **Password:** `employee123`
+
+- **Email:** `employee4@example.com`  
+  **Password:** `employee123`
+
+- **Email:** `employee5@example.com`  
+  **Password:** `employee123`
+
+---
+
 ## Getting Started
 
 ### 1. Clone the Repository

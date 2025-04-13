@@ -1,4 +1,4 @@
-Employee Management System (EMS) - React (Frontend Only)
+###Employee Management System (EMS) - React (Frontend Only)
 
 A mobile-friendly Employee Management System built entirely on mobile using GitHub Codespaces. This project is a React-based frontend app styled with Tailwind CSS, and it uses localStorage for all data persistence. It features role-based dashboards for admin and employee users.
 
